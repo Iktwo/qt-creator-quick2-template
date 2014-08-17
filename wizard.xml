@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard version="1" kind="project" 
+	id="QtQuick2Application" category="CustomApplication"
+	class="qmakeproject" firstpage="10"
+	featuresRequired="QtSupport.Wizards.FeatureQtQuick.2">
+    <description>Creates a QtQuick2 application.</description>
+    <displayname>QtQuick2 application</displayname>;
+    <displaycategory>Custom Projects</displaycategory>
+    <files>
+	<file source="app.pro" target="%ProjectName:l%.pro" openproject="true"/>
+	<file source="deployment.pri" target="deployment.pri"/>
+	<file source="src/main.cpp" target="src/main.%CppSourceSuffix%" openeditor="true"/>
+	<file source="src/uivalues.cpp" target="src/uivalues.%CppSourceSuffix%"/>
+        <file source="src/uivalues.h" target="src/uivalues.%CppHeaderSuffix%"/>
+	<file source="qml/main.qml" target="qml/main.qml" openeditor="true"/>
+	<file source="resources.qrc" target="resources.qrc"/>
+	<file source="resources/images/icon.svg" target="resources/images/icon.svg"/>
+	<file source="resources/images/iconExport.sh" target="resources/images/iconExport.sh"/>
+	<file source="android/AndroidManifest.xml" target="android/AndroidManifest.xml"/>
+	<file source="android/src/Clazz.java" target="android/src/%TopDomainName:l%/%CompanyName:l%/%ProjectName:l%/%ProjectName:c%.java"/>
+	<file source="android/res/drawable-ldpi/icon.png" target="android/res/drawable-ldpi/icon.png" binary="true"/>
+	<file source="android/res/drawable-mdpi/icon.png" target="android/res/drawable-mdpi/icon.png" binary="true"/>
+	<file source="android/res/drawable-hdpi/icon.png" target="android/res/drawable-hdpi/icon.png" binary="true"/>
+	<file source="android/res/drawable-xhdpi/icon.png" target="android/res/drawable-xhdpi/icon.png" binary="true"/>
+	<file source="android/res/drawable-xxhdpi/icon.png" target="android/res/drawable-xxhdpi/icon.png" binary="true"/>
+	<file source="android/res/drawable-xxxhdpi/icon.png" target="android/res/drawable-xxxhdpi/icon.png" binary="true"/>
+	<file source="android/res/values/screen_data.xml" target="android/res/values/screen_data.xml"/>
+	<file source="android/res/values-sw600dp/screen_data.xml" target="android/res/values-sw600dp/screen_data.xml"/>
+    </files>
+
+    <fieldpagetitle>QtQuick2 application parameters</fieldpagetitle>
+    <fields>
+	<field name="TopDomainName" mandatory="true">
+            <fieldcontrol class="QLineEdit" validator="[a-z]+" defaulttext="com" placeholdertext="Enter top level domain name"/>
+            <fielddescription>Top level domain:</fielddescription>
+        </field>
+	<field name="CompanyName" mandatory="true">
+            <fieldcontrol class="QLineEdit" validator="[a-z]+" defaulttext="company" placeholdertext="Enter a company name"/>
+            <fielddescription>Company name:</fielddescription>
+        </field>
+    </fields>
+</wizard>

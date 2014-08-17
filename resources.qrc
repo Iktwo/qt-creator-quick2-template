@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>qml/main.qml</file>
+    </qresource>
+	<qresource prefix="/images">
+        <file alias="icon">resources/images/icon.svg</file>
+    </qresource>
+    <qresource prefix="/images/ldpi">
+        <file alias="icon">android/res/drawable-ldpi/icon.png</file>
+    </qresource>
+    <qresource prefix="/images/mdpi">
+        <file alias="icon">android/res/drawable-mdpi/icon.png</file>
+    </qresource>
+    <qresource prefix="/images/hdpi">
+        <file alias="icon">android/res/drawable-hdpi/icon.png</file>
+    </qresource>
+    <qresource prefix="/images/xhdpi">
+        <file alias="icon">android/res/drawable-xhdpi/icon.png</file>
+    </qresource>
+    <qresource prefix="/images/xxhdpi">
+        <file alias="icon">android/res/drawable-xxhdpi/icon.png</file>
+    </qresource>
+    <qresource prefix="/images/xxxhdpi">
+        <file alias="icon">android/res/drawable-xxxhdpi/icon.png</file>
+    </qresource>
+</RCC>
