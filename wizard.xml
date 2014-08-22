@@ -3,6 +3,7 @@
 	id="QtQuick2Application" category="CustomApplication"
 	class="qmakeproject" firstpage="10"
 	featuresRequired="QtSupport.Wizards.FeatureQtQuick.2">
+    <icon>icon.png</icon>
     <description>Creates a QtQuick2 application.</description>
     <displayname>QtQuick2 application</displayname>;
     <displaycategory>Custom Projects</displaycategory>
