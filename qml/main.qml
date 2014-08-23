@@ -43,4 +43,3 @@ ApplicationWindow {
         onClicked: ui.showMessage("Thanks!")
     }
 }
-
