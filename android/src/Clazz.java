@@ -8,7 +8,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.util.DisplayMetrics;
 import android.widget.Toast;
 
 import java.io.File;
@@ -109,12 +108,6 @@ public class %ProjectName:c% extends org.qtproject.qt5.android.bindings.QtActivi
         m_instance.startActivity(Intent.createChooser(share, "Share image"));
     }
 
-    public static int getDPI()
-    {
-        DisplayMetrics dm = m_instance.getResources().getDisplayMetrics();
-        return dm.densityDpi;
-    }
-
     public static boolean isTablet()
     {
         return m_instance.getResources().getBoolean(R.bool.isTablet);
@@ -140,4 +133,3 @@ public class %ProjectName:c% extends org.qtproject.qt5.android.bindings.QtActivi
         return imageBuffer;
     }
 }
-
