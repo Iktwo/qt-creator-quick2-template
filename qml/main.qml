@@ -23,16 +23,16 @@ ApplicationWindow {
     title: "%ProjectName%"
 
     StackView {
-        id: stackview
+        id: stackView
         anchors.fill: parent
         focus: true
 
         Keys.onReleased: {
             if (event.key === Qt.Key_Back) {
-                if (stackview.depth > 1)
-                    stackview.pop()
-
-                event.accepted = true
+                if (stackView.depth > 1) {
+                    stackView.pop()
+	            event.accepted = true
+		}
             }
         }
     }
