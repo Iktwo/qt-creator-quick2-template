@@ -132,4 +132,39 @@ public class %ProjectName:c% extends org.qtproject.qt5.android.bindings.QtActivi
 
         return imageBuffer;
     }
+
+    private static void callSetColor(final int r, final int g, final int b, String method)
+    {
+        if (Build.VERSION.SDK_INT >= 21) {
+            try {
+                Class classToInvestigate = Class.forName("android.view.Window");
+                Method[] aClassMethods = classToInvestigate.getDeclaredMethods();
+                for (final Method m : aClassMethods) {
+                    if (m.getName() == method) {
+                        m_instance.runOnUiThread(new Runnable() {
+                            public void run() {
+                                try {
+                                    m.invoke(m_instance.getWindow(), Color.rgb(r, g, b));
+                                } catch (Exception e) {
+                                    Log.d(TAG, "ERROR: " + e);
+                                }
+                            }
+                        });
+                    }
+                }
+            } catch (Exception e) {
+                Log.d(TAG, "ERROR: " + e);
+            }
+        }
+    }
+
+    public static void setStatusBarColor(int r, int g, int b)
+    {
+        callSetColor(r, g, b, "setStatusBarColor");
+    }
+
+    public static void setNavigationBarColor(int r, int g, int b)
+    {
+        callSetColor(r, g, b, "setNavigationBarColor");
+    }
 }
