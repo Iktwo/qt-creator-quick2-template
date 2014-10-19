@@ -32,6 +32,8 @@ ApplicationWindow {
                 if (stackView.depth > 1) {
                     stackView.pop()
 	            event.accepted = true
+		} else {
+		    event.accepted = false
 		}
             }
         }
